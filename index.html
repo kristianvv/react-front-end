@@ -1,1 +1,51 @@
-<h1>Test dfjklafdajkløadffadjløfk</h1>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last opp PDF</title>
+</head>
+<body>
+    <h2 style="color: rgb(43, 134, 226);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Last opp en PDF-fil</h2>
+    
+    <input type="file" id="fileInput" accept="application/pdf" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <br><br>
+
+    <!-- PDF-visning -->
+    <iframe id="pdfViewer" width="50%" height="450px" style="display: none;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></iframe>
+    <br>
+
+    <!-- Knapp for å slette PDF -->
+    <button id="removeBtn" style="display: none;color: red;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;border-radius: 50px;">Fjern PDF</button>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.type === "application/pdf") {
+                const fileURL = URL.createObjectURL(file);
+                const pdfViewer = document.getElementById('pdfViewer');
+                const removeBtn = document.getElementById('removeBtn');
+
+                pdfViewer.src = fileURL;
+                pdfViewer.style.display = "block";
+                removeBtn.style.display = "block";
+            } else {
+                alert("Vennligst last opp en gyldig PDF-fil.");
+            }
+        });
+
+        document.getElementById('removeBtn').addEventListener('click', function() {
+            const pdfViewer = document.getElementById('pdfViewer');
+            const removeBtn = document.getElementById('removeBtn');
+            const fileInput = document.getElementById('fileInput');
+
+            pdfViewer.src = "";
+            pdfViewer.style.display = "none";
+            removeBtn.style.display = "none";
+            fileInput.value = ""; // Tilbakestiller filopplastingsfeltet
+        });
+    </script>
+
+
+</body>
+</html>
