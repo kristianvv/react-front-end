@@ -1,1 +1,56 @@
+ body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
+        h2 {
+            color: rgb(43, 134, 226);
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        #fileInput {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        iframe {
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            display: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+            font-weight: bold;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
