@@ -54,3 +54,7 @@
         button:active {
             transform: scale(0.95);
         }
+
+.wrapper {
+ background-color: #ccc;
+}
