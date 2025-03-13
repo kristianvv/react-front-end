@@ -31,29 +31,46 @@
             display: none;
         }
 
-        button {
-            margin-top: 20px;
-            padding: 12px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 30px;
-            background-color: #ff4d4d;
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: none;
-            font-weight: bold;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-        }
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
 
-        button:hover {
-            background-color: #cc0000;
-            transform: scale(1.05);
-        }
+#removeBtn, #scanBtn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+}
 
-        button:active {
-            transform: scale(0.95);
-        }
+/* Fjern PDF button */
+#removeBtn {
+    background-color: #ff4d4d;
+}
+
+#removeBtn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Scan PDF button */
+#scanBtn {
+    background-color: #4CAF50;
+}
+
+#scanBtn:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
 
 
         #fileInput {
