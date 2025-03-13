@@ -56,6 +56,8 @@
         }
 
 .wrapper {
- background-color: #ccc;
+ background-color: #97ccae;
  width: auto 0;
+ width: 100%;
+ min-height: 200px;
 }
