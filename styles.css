@@ -10,7 +10,7 @@
         }
 
         h2 {
-            color: rgb(43, 134, 226);
+            color: #f6fdff;
             margin-bottom: 20px;
             font-size: 32px;
         }
@@ -90,7 +90,7 @@
         }
 
 .wrapper {
- background-color: #97ccae;
+ background-color: #91a1c6;
  width: auto 0;
  width: 100%;
  min-height: 200px;
