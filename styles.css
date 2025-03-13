@@ -55,6 +55,40 @@
             transform: scale(0.95);
         }
 
+
+        #fileInput {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* Custom button */
+        #customFileBtn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #2b86e2;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Hover effect */
+        #customFileBtn:hover {
+            background-color: #1f6bb5;
+            transform: scale(1.05);
+        }
+        
+        /* Active effect */
+        #customFileBtn:active {
+            transform: scale(0.95);
+        }
+
 .wrapper {
  background-color: #97ccae;
  width: auto 0;
